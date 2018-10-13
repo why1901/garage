@@ -35,6 +35,8 @@ int main(void)
 
 	//车辆进场处理
 	car_in(db);
+	
+	close_drive();
 
 	wait(&status);		//等待结合子进程
 
