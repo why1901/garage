@@ -68,6 +68,10 @@ int open_screen_drive(void)
 int close_lcd_drive(void)
 {
     munmap(lcd_buf, MAP_SIZE);
+    
+    close(lcd_fd);
+    close(led_fd);
+    close(bee_fd);
 
     return close(lcd_fd);
 }
